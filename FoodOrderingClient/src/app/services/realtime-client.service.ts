@@ -10,7 +10,7 @@ import { FoodRequest } from '../interfaces/food-request';
 export class RealtimeClientService {
   private hubConnection?: signalR.HubConnection;
   private pendingFoodUpdatedSubject = new Subject<Order[]>
-  private ordersUpdated: Observable<Order[]> = this.pendingFoodUpdatedSubject.asObservable();
+  public ordersUpdated: Observable<Order[]> = this.pendingFoodUpdatedSubject.asObservable();
   constructor() {
     this.hubConnection = new signalR.HubConnectionBuilder()
       .withUrl("http://localhost:5215")
