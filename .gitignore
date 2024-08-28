@@ -156,11 +156,11 @@ csx/
 ecf/
 rcf/
 
-# Microsoft Azure BibilothecalicationInsights config file
-BibilothecalicationInsights.config
+# Microsoft Azure foodorderinglicationInsights config file
+foodorderinglicationInsights.config
 
-# Windows Store Bibilotheca package directory
-BibilothecaPackages/
+# Windows Store foodordering package directory
+foodorderingPackages/
 BundleArtifacts/
 
 # Visual Studio cache files
@@ -230,7 +230,6 @@ _Pvt_Extensions
 .fake/
 .idea/
 
-Bibilotheca.db
-Bibilotheca.production.db
-Bibilotheca.db-shm
-Bibilotheca.db-wal
+foodordering.db
+foodordering.db-shm
+foodordering.db-wal

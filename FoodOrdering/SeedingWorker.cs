@@ -14,9 +14,9 @@ public class SeedingWorker : BackgroundService
         _scopeFactory = scopeFactory;
     }
 
-    protected override Task ExecuteAsync(CancellationToken stoppingToken)
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        throw new NotImplementedException();
+        await SeedDataAsync();
     }
 
     private async Task SeedDataAsync()
