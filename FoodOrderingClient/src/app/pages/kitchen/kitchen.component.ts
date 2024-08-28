@@ -1,6 +1,6 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { Order } from '../../interfaces/order';
-import { DatePipe } from '@angular/common';
+import { DatePipe, AsyncPipe } from '@angular/common';
 import { firstValueFrom, Subscription } from 'rxjs';
 import { RealtimeClientService } from '../../services/realtime-client.service';
 import { HttpClient } from '@angular/common/http'

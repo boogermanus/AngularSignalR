@@ -33,7 +33,7 @@ public class FoodHub : Hub<IFoodOrderClient>
     {
         var orders = await _context.Orders
             .Include(o => o.FoodItem)
-            .Where(o => o.OrderState != OrderState.Ordered)
+            .Where(o => o.OrderState != OrderState.Completed)
             .ToListAsync();
 
         await Clients.All.PendingFoodUpdated(orders);
