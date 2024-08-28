@@ -44,6 +44,10 @@ export class CustomersComponent implements OnInit {
       );
 
     this.activeOrders.set([...orders]);
+
+    this.activeOrdersSubscription = this.realtime.ordersUpdated.subscribe(orders => {
+      this.activeOrders.set([...orders])
+    })
   }
 
   async sendOrder(foodId: number, tableNumber: number) {
