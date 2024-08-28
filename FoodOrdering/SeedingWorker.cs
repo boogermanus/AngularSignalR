@@ -23,6 +23,7 @@ public class SeedingWorker : BackgroundService
     {
         using var scope = _scopeFactory.CreateScope();
         await using var context = scope.ServiceProvider.GetRequiredService<DataContext>();
+        await context.Database.EnsureDeletedAsync();
         await context.Database.EnsureCreatedAsync();
         await context.Database.MigrateAsync();
 

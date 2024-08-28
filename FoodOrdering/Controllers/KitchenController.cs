@@ -30,7 +30,7 @@ public class KitchenController : ControllerBase
     {
         return _context.Orders
             .Include(o => o.FoodItem)
-            .Where(o => o.OrderState !=  OrderState.Completed)
+            .Where(o => o.OrderState != OrderState.Completed)
             .ToList();
     }
 }

@@ -15,7 +15,7 @@ public class FoodHub : Hub<IFoodOrderClient>
         _context = context;
     }
 
-    public async Task OrdderFoodItem(FoodRequest request)
+    public async Task OrderFoodItem(FoodRequest request)
     {
         _context.Orders.Add(new Order
         {

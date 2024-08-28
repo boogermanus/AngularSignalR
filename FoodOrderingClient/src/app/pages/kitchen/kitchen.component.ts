@@ -30,7 +30,7 @@ export class KitchenComponent implements OnInit {
   async ngOnInit() {
     // this.realtime.connect();
     let existingOrders = await firstValueFrom(
-      this.httpClient.get<Array<Order>>('http://localhost:4200/api/Kitchen/GetExistingOrders'));
+      this.httpClient.get<Array<Order>>('http://localhost:5215/api/Kitchen/GetExistingOrders'));
     this.orders.set([...existingOrders]);
     this.orderSubscription = this.realtime.ordersUpdated.subscribe(x => this.orders.set([...x]));
   }

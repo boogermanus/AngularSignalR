@@ -13,7 +13,10 @@ export class RealtimeClientService {
   public ordersUpdated: Observable<Order[]> = this.pendingFoodUpdatedSubject.asObservable();
   constructor() {
     this.hubConnection = new signalR.HubConnectionBuilder()
-      .withUrl("http://localhost:5215")
+      .withUrl("http://localhost:5215/foodhub", {
+        skipNegotiation: true,
+        transport: signalR.HttpTransportType.WebSockets
+      })
       .build();
 
       this.hubConnection
